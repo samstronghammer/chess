@@ -1,2 +1,2 @@
 # chess
-Client side chess game in TypeScript/React
+Client side chess game in TypeScript/React.
