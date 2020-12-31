@@ -1,0 +1,25 @@
+@import "src/services/config/colors";
+@import "src/services/config/breakpoints";
+
+.backgroundDiv {
+  background-color: $BACKGROUND_GRAY;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+}
+
+.foregroundDiv {
+  background-color: black;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: auto;
+  @include for-tablet-portrait-up {
+    max-width: 90vh;
+    padding: 40px 0;
+  }
+}

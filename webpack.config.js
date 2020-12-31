@@ -1,4 +1,5 @@
 const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 const host = process.env.HOST || 'localhost';
 
 module.exports = {
@@ -52,4 +53,10 @@ module.exports = {
             poll: true
         },
     },
+    plugins: [
+        new CopyWebpackPlugin({patterns: [
+            {from: "assets", to: "assets"},
+            {from: "index.html", to: "index.html"}
+        ]})
+    ]
 };

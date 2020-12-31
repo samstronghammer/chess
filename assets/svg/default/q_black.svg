@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 52.916665 52.916669"
+   height="200"
+   width="200">
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(0,-244.0833)"
+     id="layer1">
+    <path
+       id="rect4932"
+       d="m 0,293.97845 c 17.550563,-9.8689 35.187851,-10.04761 52.916664,0 v 3.02152 H 0 Z"
+       style="fill:#000000;fill-opacity:1;stroke-width:0;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none" />
+    <path
+       id="path5213"
+       transform="matrix(0.26458333,0,0,0.26458333,0,244.0833)"
+       d="M 100.00586 0 C 90.696581 36.119281 87.198931 49.378129 81.822266 96.458984 C 71.252409 55.784617 40.912109 35.849609 40.912109 35.849609 C 51.255017 52.224601 54.091279 105.10371 56.820312 130.80469 C 45.209616 107.49676 12.121094 84.085937 12.121094 84.085938 C 12.121094 84.085938 28.337495 127.91212 32.900391 166.36523 C 52.254195 159.36624 73.195032 155.94781 93.373047 154.47656 C 95.583246 154.38991 97.793573 154.34778 100.00195 154.3457 L 100.00586 122.4707 L 100.00781 154.3457 C 122.88092 154.32495 145.60184 158.78931 167.07812 166.63477 C 171.59692 128.1173 187.88867 84.085937 187.88867 84.085938 C 187.88867 84.085938 154.80015 107.49676 143.18945 130.80469 C 145.91849 105.10371 148.7567 52.224601 159.09961 35.849609 C 159.09961 35.849609 128.75736 55.784617 118.1875 96.458984 C 112.81083 49.378129 109.31514 36.119281 100.00586 0 z "
+       style="fill:#000000;stroke:none;stroke-width:0.99999994px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+</svg>

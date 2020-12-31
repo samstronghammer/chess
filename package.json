@@ -1,10 +1,11 @@
 {
-  "name": "try2",
+  "name": "chess",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
     "@types/webpack-env": "^1.15.0",
+    "copy-webpack-plugin": "^7.0.0",
     "css-loader": "^3.4.2",
     "express": "^4.17.1",
     "node-sass": "^4.13.0",
@@ -13,13 +14,12 @@
     "ts-loader": "^6.2.1",
     "typed-scss-modules": "^1.1.0",
     "typescript": "^3.7.4",
-    "webpack": "^4.41.5",
+    "webpack": "^5.11.0",
     "webpack-cli": "^3.3.10",
     "webpack-dev-server": "^3.10.1"
   },
   "scripts": {
-    "builddev": "tsm src && webpack --mode=development ; find . -name \\*.scss.d.ts -type f -delete",
-    "buildprod": "tsm src && webpack --mode=production ; find . -name \\*.scss.d.ts -type f -delete",
+    "build": "tsm src && webpack --mode=development ; find . -name \\*.scss.d.ts -type f -delete",
     "start": "find . -name \\*.scss.d.ts -type f -delete && webpack-dev-server --hot --config ./webpack.config.js"
   },
   "dependencies": {
@@ -31,7 +31,7 @@
     "@types/react-dom": "^16.9.4",
     "classnames": "^2.2.6",
     "core-js": "^3.6.4",
-    "csstype": "^2.6.8",
+    "csstype": "^2.6.11",
     "immutable": "^4.0.0-rc.12",
     "konva": "^4.1.2",
     "lodash": "^4.17.15",
