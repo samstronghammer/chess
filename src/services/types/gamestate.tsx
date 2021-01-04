@@ -265,7 +265,7 @@ export class Game {
         if (this.result) {
             return Set()
         }
-        const {turn, castlingRights} = this.currentState
+        const {turn, castlingRights, enPassant} = this.currentState
         const piece = this.getAt(location)
         let moves: Set<BoardLocation> = Set()
         if (piece && piece.side === turn) {
@@ -290,7 +290,16 @@ export class Game {
                     const diag2 = location.add(new Pair(deltaRow, 1))
                     const p2 = diag2 && this.getAt(diag2)
                     if (p2 && p2.side !== piece.side) moves = moves.add(diag2)
-                    // Taking en passant TODO
+                    // Taking en passant
+                    const enPassantRow = turn === SideEnum.WHITE ? 3 : 4
+                    if (enPassantRow === location.row) {
+                        if (enPassant.get(location.column - 1, false)) {
+                            moves = moves.add(diag1)
+                        }
+                        if (enPassant.get(location.column + 1, false)) {
+                            moves = moves.add(diag2)
+                        }
+                    }
                     break;
                 case (PieceEnum.KNIGHT):
                     moves = location.addAll(BoardLocation.knight_vectors)
@@ -362,6 +371,7 @@ export class Game {
 
     makeMove = (from: BoardLocation, to: BoardLocation, skipGameEndChecks = false) => {
         const {turn, castlingRights} = this.currentState
+        this.currentState.enPassant = List.of(false, false, false, false, false, false, false, false)
         const piece = this.getAt(from)
         if (!piece) {
             throw new Error(`No piece found at ${from.toString()}`)
@@ -414,6 +424,10 @@ export class Game {
                     } else if (from.column === 7) {
                         castlingRights.get(turn).shortCastle = false
                     }
+                }
+            } else if (piece.piece === PieceEnum.PAWN && (from.row === 1 && piece.side === SideEnum.BLACK || from.row === 6 && piece.side === SideEnum.WHITE)) {
+                if (Math.abs(to.row - from.row) === 2) {
+                    this.currentState.enPassant = this.currentState.enPassant.set(from.column, true)
                 }
             }
             this.setAt(from, undefined)
